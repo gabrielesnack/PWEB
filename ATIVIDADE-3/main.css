@@ -1,0 +1,72 @@
+body {
+  font-size: 16px;
+  background-color: #100f0f;
+  color: rgb(191 187 187)
+}
+
+.container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mobile-first__title {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.mobile-first__subtitle {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.mobile-first__paragraph {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+/* tratamento de media query para celular deitado */
+@media screen and (min-width: 568px) {
+  img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+/* tratamento de media query para pc */
+@media screen and (min-width: 992px) {
+  .mobile-first {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-flow: wrap;
+  }
+
+  .mobile-first__content {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+  } 
+
+  /* .mobile-first__content:nth-child(3) .mobile-first__paragraph {
+  } */
+
+  .mobile-first__content:nth-child(4) img {
+    float: right;
+    margin: 0 0 0 15px;
+  }
+}
