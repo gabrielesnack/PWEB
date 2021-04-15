@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcularAreaDoRetangulo(x, y) {
+            return x * y;
+        }
+
+        function gerarRetangulo(x, y) {
+            return {
+                base: x,
+                altura: y,
+                area: calcularAreaDoRetangulo(x, y)
+            }
+        }
+
+        function Conta() {
+            this.nomeCorrentista = null;
+            this.banco = null; 
+            this.numeroConta = null; 
+            this.saldo = null;
+        }
+
+        function Corrente() {
+            Conta.call(this);
+            this.saldoEspecial = null;
+        }
+
+        function Poupanca() {
+            Conta.call(this);
+            this.juros = null;
+            this.dataVencimento = null;
+        }
+
+        const ContaCorrete1 = new Corrente();
+        ContaCorrete1.nomeCorrentista = 'Gabriel';
+        ContaCorrete1.banco = 'Inter';
+        ContaCorrete1.numeroConta = '33';
+        ContaCorrete1.saldo = '999';
+        ContaCorrete1.saldoEspecial = 'Não';
+
+        const ContaCorrete2 = new Corrente();
+        ContaCorrete2.nomeCorrentista = 'Gui';
+        ContaCorrete2.banco = 'Nubank';
+        ContaCorrete2.numeroConta = '55';
+        ContaCorrete2.saldo = '347';
+        ContaCorrete2.saldoEspecial = 'Sim';
+
+        const ContaPoupanca1 = new Poupanca();
+        ContaPoupanca1.nomeCorrentista = 'Gabriel';
+        ContaPoupanca1.banco = 'Nubank';
+        ContaPoupanca1.numeroConta = '43';
+        ContaPoupanca1.saldo = '54';
+        ContaPoupanca1.juros = '30%';
+        ContaPoupanca1.dataVencimento = '10/04/2023';
+
+
+        const ContaPoupanca2 = new Poupanca();
+        ContaPoupanca2.nomeCorrentista = 'Gui';
+        ContaPoupanca2.banco = 'Inter';
+        ContaPoupanca2.numeroConta = '34';
+        ContaPoupanca2.saldo = '447';
+        ContaPoupanca2.juros = '70%';
+        ContaPoupanca2.dataVencimento = '10/04/2029';
+
+        console.log('ContaCorrente do Gabriel', ContaCorrete1)
+        console.log('ContaCorrente do Gui', ContaCorrete2)
+        console.log('Poupança do Gabriel', ContaPoupanca1)
+        console.log('Poupança do Gui', ContaPoupanca2)
+
+        console.log('Gerar Retangulo 5x5', gerarRetangulo(5,5))
+        console.log('Gerar Retangulo 15x15', gerarRetangulo(15,15))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
