@@ -15,13 +15,20 @@
     .imagem:hover {
       background: url('janelaaberta.png') no-repeat;
     }
-    .imagem:active {
-      background: url('quebrado.png') no-repeat;
+
+    .break {
+      background: url('quebrado.png') no-repeat !important;
     }
   </style>
+
+  <script>
+    function breakimage() {
+      document.getElementById("img").classList.add("break");
+    }
+  </script>
 </head>
 <body>
   <h1 id="TITULO">ABRA A JANELA</h1>
-  <div class="imagem"></div>
+  <div id="img" class="imagem" onclick="breakimage()"></div>
 </body>
 </html>
