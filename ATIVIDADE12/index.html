@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Gabriel Esnack" />
+
+  <title>
+    Atividade 12
+  </title>
+
+  <script type="text/javascript" src="/validarDados.js"></script>
+</head>
+
+<body>
+  <form action="" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+
+    <div id="principal" width=200 heigth=200>
+      <p>Nome Completo:</p>
+      <input name="idNome" type="text" id="idNome" size="52" maxlength="150">
+      <br>
+      <br> 
+      <p> E-Mail : </p>
+      <input name="idEmail" type="email" id="idEmail" size="52" maxlength="150">
+      <br>
+      <br> 
+      <p> Comentário : </p>
+      <textarea name="idMensagem" cols="50" rows="8" id="idMensagem" value="" input></textarea>
+      <br>
+      <br>
+      <strong>Pesquisa</strong>
+      <br><br>
+      <em>Primeira vez nessa página?</em>
+      <br><br>
+      Sim
+        <input type="radio" name="tipo" value="1" onclick="formatElement();">
+      Não:
+        <input type="radio" name="tipo" value="2" onclick="formatElement();">
+      <br>
+      <br>
+      <br>
+      <input name="Submit" type="submit" form="formulario1" value="Enviar">
+      <input name="Reset" type="reset" form="formulario1" value="Redefinir">
+    </div>
+  </form>
+</body>
+
+</html>
